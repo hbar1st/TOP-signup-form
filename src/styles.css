@@ -3,3 +3,122 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  line-height: 1.8;
+  color: rgba(81, 8, 8, 0.854);
+  background: linear-gradient(
+    rgb(186, 186, 223) 0%,
+    pink 40%,
+    rgb(238, 187, 161) 55%,
+    rgb(209, 180, 228) 75%,
+    rgb(234, 137, 137) 100%
+  );
+}
+
+form {
+  border: 2px solid brown;
+  display: flex;
+  gap: 0px;
+  padding: 30px;
+  flex-direction: column;
+  background-color: rgb(243 253 255);
+
+  h1 {
+    margin-bottom: 10px;
+  }
+  section > div {
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+    width: 50ch;
+    display: grid;
+    grid-template-columns: 30px 1fr 2fr 30px;
+    grid-template-rows: 1fr 1fr max-content;
+  }
+  .e-hidden {
+    visibility: hidden;
+  }
+  p.error {
+    grid-column: 2 / -2;
+    letter-spacing: normal;
+    color: rgb(237, 0, 0);
+    text-shadow: 1px 1px black;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .e-visible {
+    visibility: visible;
+  }
+  label,
+  input,
+  select {
+    grid-column: 2 / -2;
+    font-weight: 500;
+    font-size: 1.3rem;
+    border-radius: 3px;
+  }
+
+  input {
+    padding: 0px 3px;
+  }
+  input:valid {
+    background-color: #f4fef1;
+  }
+  label {
+    margin-left: -1rem;
+  }
+  button {
+    padding: 5px 20px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    color: inherit;
+    border: 2px double rgba(81, 8, 8, 0.854);
+    box-shadow: 1px 1px 3px 1px rgb(59, 25, 25);
+    background-color: rgb(236, 255, 204);
+  }
+}
+
+div.invalid {
+  background-color: rgb(235 255 208);
+}
+
+input:invalid,
+select:invalid {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-color: rgb(255, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+
+dialog {
+  padding: 30px 30px 0px;
+  text-align: center;
+  position: relative;
+  margin: 30px auto 0px;
+}
+
+dialog::backdrop {
+  background: linear-gradient(
+    rgb(186, 186, 223) 0%,
+    pink 40%,
+    rgb(238, 187, 161) 55%,
+    rgb(209, 180, 228) 75%,
+    rgb(234, 137, 137) 100%
+  );
+  overflow: hidden;
+
+  img {
+    position: relative;
+    top: 9px;
+  }
+}
