@@ -60,7 +60,7 @@ form {
   select {
     grid-column: 2 / -2;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 1.3rem, 1.5rem);
     border-radius: 3px;
   }
 
@@ -75,11 +75,11 @@ form {
   }
   button {
     padding: 5px 20px;
-    margin-top: 10px;
+    margin-top: 1rem;
     font-weight: 400;
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     letter-spacing: 1px;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.5rem, calc(1.5rem + 1vw));
     border-radius: 3px;
     color: inherit;
     border: 2px double rgba(81, 8, 8, 0.854);
